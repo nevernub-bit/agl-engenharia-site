@@ -6,6 +6,10 @@
 <title>AGL Engenharia — Engenharia, gestão e construção em Cuiabá/MT</title>
 <meta name="description" content="AGL Engenharia: mão de obra para construções residenciais e comerciais, projetos de engenharia e acompanhamento técnico de obras em Cuiabá, Mato Grosso. Gestão com Mais Controle, relatórios periódicos e acesso individual ao histórico da obra.">
 <meta name="theme-color" content="#001E7B">
+<link rel="icon" href="assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
 <link rel="canonical" href="https://aglengenharia.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
@@ -17,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/styles.css?v=20261124">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,15 +50,7 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a class="brand" href="#topo" aria-label="AGL Engenharia — início">
-      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-        <path d="M2 30V13L11 2v28" fill="none" stroke="currentColor" stroke-width="1.6"/>
-        <path d="M15 30V8l7 6v16" fill="none" stroke="currentColor" stroke-width="1.6" opacity=".55"/>
-        <path d="M26 30V18l4 4v8" fill="currentColor"/>
-      </svg>
-      <span class="brand__text">
-        <strong>AGL</strong>
-        <span>Engenharia</span>
-      </span>
+      <img class="brand__logo" src="assets/img/logo-agl-header.png" alt="AGL Engenharia" width="303" height="256">
     </a>
 
     <nav class="nav__links" aria-label="Navegação principal">
@@ -66,7 +62,6 @@
     </nav>
 
     <div class="nav__actions">
-      <a class="btn btn--ghost nav__phone" href="tel:+5565992209399">65 99220-9399</a>
       <a class="btn btn--primary" href="https://wa.me/5565992209399?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20AGL%20Engenharia%20e%20gostaria%20de%20falar%20sobre%20uma%20obra." target="_blank" rel="noopener">Falar com a AGL</a>
       <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMobile" aria-label="Abrir menu">
         <span></span><span></span>
@@ -79,7 +74,7 @@
     <a href="#gestao">Gestão de obras</a>
     <a href="#processo">Processo</a>
     <a href="#obras">Obras</a>
-    <a href="#referencias">Referências</a>
+    <a href="#referencias" hidden>Referências</a>
     <a href="#agl">A AGL</a>
     <a href="#contato">Contato</a>
     <a class="nav__mobile-cta" href="https://wa.me/5565992209399?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20AGL%20Engenharia%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicitar orçamento →</a>
@@ -114,7 +109,7 @@
     <div class="wrap hero__inner">
       <div class="hero__copy">
         <p class="eyebrow" data-reveal>
-          <span class="tick"></span>Engenharia · Gestão · Construção — Cuiabá, MT
+          <span class="tick"></span>Engenharia · Gestão · Construção
         </p>
         <h1 data-reveal data-delay="1">
           Engenharia que<br>
@@ -195,9 +190,9 @@
           </p>
           <ul class="pillars" data-reveal data-delay="2">
             <li><span class="mono">01</span> Qualidade<small>Execução correta e padrão técnico.</small></li>
-            <li><span class="mono">02</span> Velocidade<small>Andamento constante da obra.</small></li>
+            <li><span class="mono">02</span> Prazo<small>Compromisso com o cronograma da obra.</small></li>
             <li><span class="mono">03</span> Gestão<small>Método e ferramentas de controle.</small></li>
-            <li><span class="mono">04</span> Transparência<small>Informação clara, sem ruído.</small></li>
+            <li><span class="mono">04</span> Transparência<small>Informação clara sobre cada etapa da obra.</small></li>
           </ul>
         </div>
       </div>
@@ -211,8 +206,8 @@
         <p class="label mono">01 — Serviços</p>
         <h2>O que a AGL executa</h2>
         <p class="section__intro">
-          Quatro frentes que se conectam: a mesma equipe que projeta, executa e
-          acompanha — reduzindo ruído entre quem pensa a obra e quem constrói.
+          Da construção residencial e comercial aos projetos de engenharia e
+          acompanhamento técnico, a AGL atua em cada etapa para manter a obra sob controle.
         </p>
       </header>
 
@@ -290,18 +285,20 @@
           <h2 data-reveal>Não é só colocar<br>equipe na obra.<br><span class="accent">É obra sob controle.</span></h2>
           <p data-reveal data-delay="1">
             A AGL trabalha com o sistema <strong>Mais Controle</strong> no gerenciamento
-            das obras. Planejamento, execução e acompanhamento ficam registrados e
-            organizados — não apenas na memória de quem está no canteiro.
+            das obras. Planejamento, execução, custos, prazos e acompanhamento ficam
+            organizados e registrados — permitindo uma gestão mais precisa e informações
+            claras ao longo da obra.
           </p>
           <p class="management__quote" data-reveal data-delay="2">
             O cliente não precisa estar na obra<br>para saber o que está acontecendo.
           </p>
           <ul class="checks" data-reveal data-delay="2">
-            <li>Etapas e frentes de serviço organizadas</li>
+            <li>Planejamento e organização das etapas</li>
+            <li>Acompanhamento de custos e prazos</li>
             <li>Registro das atividades executadas</li>
             <li>Relatórios periódicos de evolução</li>
             <li>Histórico da obra acessível ao cliente</li>
-            <li>Link individual de acesso para cada cliente</li>
+            <li>Relatórios disponibilizados por link individual</li>
           </ul>
           <p class="management__note mono" data-reveal data-delay="3">Planejamento → Execução → Acompanhamento → Relatório → Controle → Entrega</p>
         </div>
@@ -347,7 +344,7 @@
                   <i style="width:82%"></i><i style="width:64%"></i><i style="width:74%"></i><i style="width:38%"></i>
                 </div>
               </div>
-              <p class="dash__caption mono">Representação ilustrativa do acompanhamento. Sempre personalizado por obra.</p>
+              <p class="dash__caption mono">Painel interno da AGL no sistema Mais Controle. Representação ilustrativa, sempre personalizada por obra.</p>
             </footer>
           </div>
           <!-- Componente preparado para receber screenshots reais do Mais Controle.
@@ -355,37 +352,35 @@
           <div class="access" data-reveal data-delay="2">
             <div class="access__head">
               <svg class="access__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="4" y="10" width="16" height="11" rx="1.5"/>
-                <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+                <rect x="5" y="3" width="14" height="18" rx="1.5"/>
+                <path d="M9 8h6M9 12h6M9 16h4"/>
               </svg>
               <span class="mono">Histórico da obra</span>
-              <span class="mono access__pill">Acesso do cliente</span>
+              <span class="mono access__pill">Relatório por link</span>
             </div>
-            <p class="access__title">Cada cliente recebe um <strong>link individual</strong> para acompanhar o histórico da sua obra.</p>
+            <p class="access__title">Relatórios periódicos e registros da evolução da obra, <strong>organizados para o cliente</strong>.</p>
             <div class="access__link">
-              <span class="mono access__mask" aria-hidden="true">••••••••</span>
-              <span class="mono">link individual · acesso restrito</span>
+              <span class="mono">Relatório periódico · acesso por link</span>
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
             </div>
             <p class="access__note mono">Registros atualizados a cada relatório periódico</p>
           </div>
-          <span class="dash__tag mono" aria-hidden="true">FIG. 01 — CONTROLE E ACESSO</span>
+          <span class="dash__tag mono" aria-hidden="true">FIG. 01 — CONTROLE E HISTÓRICO</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===================== RELATÓRIOS / TRANSPARÊNCIA ===================== -->
-  <section class="section reports">
+  <!-- Seção 03 oculta temporariamente. Para reativar, remova o atributo "hidden" da tag abaixo. -->
+  <section class="section reports" hidden>
     <div class="wrap">
       <header class="section__head section__head--center" data-reveal>
         <p class="label mono">03 — Relatórios e transparência</p>
-        <h2>O cliente sabe <span class="accent">o que está acontecendo.</span></h2>
+        <h2>A obra acontece. <span class="accent">O cliente acompanha.</span></h2>
         <p class="section__intro section__intro--center">
-          Relatórios periódicos e intuitivos sobre a evolução da obra e as atividades
-          executadas. Além dos relatórios, cada cliente recebe um link individual para
-          consultar o histórico da sua obra. Sem precisar perguntar, sem depender de
-          suposição.
+          Relatórios periódicos, objetivos e organizados para mostrar o que foi executado,
+          o que está em andamento e quais são os próximos passos.
         </p>
       </header>
 
@@ -393,24 +388,102 @@
         <article class="report-card" data-reveal>
           <span class="mono report-card__num">/ 01</span>
           <h3>Periodicidade</h3>
-          <p>Comunicação recorrente ao longo da obra, não apenas no início e no fim.</p>
+          <p>Relatórios entregues ao longo da obra, mantendo o cliente informado sobre sua evolução.</p>
         </article>
         <article class="report-card" data-reveal data-delay="1">
           <span class="mono report-card__num">/ 02</span>
           <h3>Objetividade</h3>
-          <p>O que foi executado, o que está em andamento e o que vem na próxima etapa.</p>
+          <p>Informações diretas sobre o que foi executado, o que está em andamento e o que vem pela frente.</p>
         </article>
         <article class="report-card" data-reveal data-delay="2">
           <span class="mono report-card__num">/ 03</span>
           <h3>Registro</h3>
-          <p>Histórico da evolução da obra, com leitura simples para quem não é da área.</p>
+          <p>Evolução documentada da obra, com informações organizadas para consulta.</p>
         </article>
         <article class="report-card report-card--accent" data-reveal data-delay="3">
           <span class="mono report-card__num">/ 04</span>
-          <h3>Acesso individual</h3>
-          <p>Um link exclusivo para cada cliente consultar o histórico e os registros da sua obra.</p>
-          <span class="report-card__tag mono">Gestão digital</span>
+          <h3>Evidência</h3>
+          <p>Fotos, registros e informações que mostram a evolução real da obra.</p>
         </article>
+      </div>
+
+      <!-- Amostra visual de relatório periódico (conteúdo gráfico ilustrativo) -->
+      <div class="report-sheet" data-reveal aria-label="Representação visual de um relatório periódico da AGL">
+        <div class="report-sheet__head">
+          <span class="mono report-sheet__mark">AGL · Engenharia</span>
+          <span class="mono report-sheet__title">Relatório periódico</span>
+          <span class="mono report-sheet__badge">Representação visual · sem dados reais</span>
+        </div>
+
+        <div class="report-sheet__meta">
+          <div class="sheet-meta">
+            <span class="mono">Obra</span>
+            <p>Residencial unifamiliar</p>
+          </div>
+          <div class="sheet-meta">
+            <span class="mono">Período</span>
+            <p>Ciclo de acompanhamento</p>
+          </div>
+          <div class="sheet-meta">
+            <span class="mono">Escopo</span>
+            <p>Execução e gestão de obra</p>
+          </div>
+        </div>
+
+        <div class="report-sheet__body">
+          <div class="report-sheet__main">
+            <div class="sheet-block">
+              <span class="mono sheet-block__label">Resumo da evolução</span>
+              <div class="sheet-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <div class="sheet-block">
+              <span class="mono sheet-block__label">Sequência de etapas</span>
+              <ul class="sheet-track">
+                <li class="is-done"><span class="mono">Início</span></li>
+                <li class="is-done"><span class="mono">Execução</span></li>
+                <li class="is-now"><span class="mono">Andamento</span></li>
+                <li><span class="mono">Próximos</span></li>
+                <li><span class="mono">Entrega</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="report-sheet__media">
+            <span class="mono sheet-block__label">Registros</span>
+            <div class="sheet-tiles" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <ul class="sheet-legend mono">
+              <li class="is-done">Executado</li>
+              <li class="is-now">Em andamento</li>
+              <li>Próximo</li>
+            </ul>
+            <p class="mono sheet-caption">Registros fotográficos representados graficamente</p>
+          </div>
+        </div>
+
+        <div class="report-sheet__cols">
+          <div class="sheet-col">
+            <span class="mono">Etapas executadas</span>
+            <div class="sheet-lines" aria-hidden="true"><i></i><i></i></div>
+          </div>
+          <div class="sheet-col sheet-col--now">
+            <span class="mono">Serviços em andamento</span>
+            <div class="sheet-lines" aria-hidden="true"><i></i><i></i></div>
+          </div>
+          <div class="sheet-col">
+            <span class="mono">Próximos passos</span>
+            <div class="sheet-lines" aria-hidden="true"><i></i><i></i></div>
+          </div>
+        </div>
+
+        <div class="report-sheet__notes">
+          <span class="mono">Observações</span>
+          <span class="sheet-note-line" aria-hidden="true"></span>
+        </div>
+
+        <div class="report-sheet__foot">
+          <span class="mono">Relatórios enviados ao cliente por link</span>
+          <span class="mono">Modelo de apresentação</span>
+        </div>
       </div>
 
       <div class="quote-band" data-reveal>
@@ -474,65 +547,141 @@
           <h2>O que foi construído</h2>
         </div>
         <p class="section__aside">
-          Este espaço recebe as obras da AGL: execução, detalhes construtivos, etapas e
-          resultado final. As imagens e informações de cada projeto serão publicadas
-          conforme fornecidas pela empresa.
+          Registros reais de obras executadas pela AGL: execução, fachadas de obras
+          entregues e projetos.
         </p>
       </header>
 
       <div class="works__grid">
-        <article class="work" data-reveal>
-          <div class="work__frame" role="img" aria-label="Espaço reservado para fotografia de obra residencial">
-            <span class="mono">OBRA 01</span>
-            <span class="work__plus" aria-hidden="true"></span>
+        <article class="work work--feature" data-reveal>
+          <div class="work__frame work__frame--photo">
+            <picture>
+              <source type="image/webp" srcset="assets/img/obra-em-andamento-900.webp 900w, assets/img/obra-em-andamento.webp 1280w" sizes="(max-width: 900px) 100vw, 1240px">
+              <img src="assets/img/obra-em-andamento.jpg"
+                   srcset="assets/img/obra-em-andamento-900.jpg 900w, assets/img/obra-em-andamento.jpg 1280w"
+                   sizes="(max-width: 900px) 100vw, 1240px"
+                   width="1280" height="720" fetchpriority="high" decoding="async"
+                   alt="Obra em execução vista por drone: estrutura de concreto, alvenaria em elevação e andaimes">
+            </picture>
+            <span class="work__badge work__badge--live mono">Em execução</span>
+            <span class="work__idx mono">01</span>
           </div>
           <div class="work__meta">
-            <h3>Residencial</h3>
-            <p class="mono">Conteúdo a ser fornecido</p>
+            <h3>Obra em execução</h3>
+            <p class="mono">Estrutura e alvenaria</p>
           </div>
         </article>
-        <article class="work" data-reveal data-delay="1">
-          <div class="work__frame" role="img" aria-label="Espaço reservado para fotografia de obra comercial">
-            <span class="mono">OBRA 02</span>
-            <span class="work__plus" aria-hidden="true"></span>
+
+        <article class="work work--half" data-reveal data-delay="1">
+          <div class="work__frame work__frame--photo">
+            <picture>
+              <source type="image/webp" srcset="assets/img/skyfit-academia-900.webp 900w, assets/img/skyfit-academia.webp 1225w" sizes="(max-width: 900px) 100vw, 620px">
+              <img src="assets/img/skyfit-academia.jpg"
+                   srcset="assets/img/skyfit-academia-900.jpg 900w, assets/img/skyfit-academia.jpg 1225w"
+                   sizes="(max-width: 900px) 100vw, 620px"
+                   width="1225" height="919" loading="lazy" decoding="async"
+                   alt="Fachada da SkyFit Academia, obra comercial com fechamento metálico e acesso principal">
+            </picture>
+            <span class="work__badge mono">Comercial</span>
+            <span class="work__idx mono">02</span>
           </div>
           <div class="work__meta">
-            <h3>Comercial</h3>
-            <p class="mono">Conteúdo a ser fornecido</p>
+            <h3>SkyFit Academia</h3>
+            <p class="mono">Obra comercial</p>
           </div>
         </article>
-        <article class="work" data-reveal data-delay="2">
-          <div class="work__frame" role="img" aria-label="Espaço reservado para fotografia de projeto de engenharia">
-            <span class="mono">OBRA 03</span>
-            <span class="work__plus" aria-hidden="true"></span>
+
+        <article class="work work--half" data-reveal data-delay="2">
+          <div class="work__frame work__frame--photo">
+            <picture>
+              <source type="image/webp" srcset="assets/img/obra-entregue-01-900.webp 900w, assets/img/obra-entregue-01.webp 1280w" sizes="(max-width: 900px) 100vw, 620px">
+              <img src="assets/img/obra-entregue-01.jpg"
+                   srcset="assets/img/obra-entregue-01-900.jpg 900w, assets/img/obra-entregue-01.jpg 1280w"
+                   sizes="(max-width: 900px) 100vw, 620px"
+                   width="1280" height="720" loading="lazy" decoding="async"
+                   alt="Residência entregue vista por drone, com dois pavimentos e fachada branca">
+            </picture>
+            <span class="work__badge mono">Entregue</span>
+            <span class="work__idx mono">03</span>
           </div>
           <div class="work__meta">
-            <h3>Projeto</h3>
-            <p class="mono">Conteúdo a ser fornecido</p>
+            <h3>Residência entregue</h3>
+            <p class="mono">Registro aéreo</p>
           </div>
         </article>
-        <article class="work" data-reveal data-delay="3">
-          <div class="work__frame" role="img" aria-label="Espaço reservado para fotografia de obra em execução">
-            <span class="mono">OBRA 04</span>
-            <span class="work__plus" aria-hidden="true"></span>
+
+        <article class="work work--half" data-reveal data-delay="3">
+          <a class="work__frame work__frame--photo work__frame--link"
+             href="https://vilarindofotografia.smugmug.com/2026-01-29-Eng-JVS/Casa/n-zK4G3p/i-LzbTrJs"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Abrir a galeria de fotos da obra Florais da Mata em uma nova aba">
+            <picture>
+              <source type="image/webp" srcset="assets/img/obra-entregue-02-900.webp 900w, assets/img/obra-entregue-02.webp 1800w" sizes="(max-width: 900px) 100vw, 620px">
+              <img src="assets/img/obra-entregue-02.jpg"
+                   srcset="assets/img/obra-entregue-02-900.jpg 900w, assets/img/obra-entregue-02.jpg 1800w"
+                   sizes="(max-width: 900px) 100vw, 620px"
+                   width="1800" height="1200" loading="lazy" decoding="async"
+                   alt="Fachada de residência entregue, com acesso em concreto e detalhes em madeira">
+            </picture>
+            <span class="work__cta mono">Ver galeria
+              <svg viewBox="0 0 12 12" width="9" height="9" aria-hidden="true" focusable="false"><path d="M3 9L9 3M9 3H4M9 3v5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            </span>
+            <span class="work__badge mono">Entregue</span>
+            <span class="work__idx mono">04</span>
+          </a>
+          <div class="work__meta">
+            <h3>Residência entregue</h3>
+            <p class="mono">Fachada e acesso</p>
+          </div>
+        </article>
+
+        <article class="work work--half work--3d" data-reveal data-delay="4">
+          <div class="work__frame work__frame--photo work__frame--3d">
+            <!-- Visualizador 3D do Sketchfab: o iframe só é carregado ao clicar,
+                 para não pesar o carregamento da página. -->
+            <button class="viewer" type="button"
+                    data-sketchfab="8aeb6a3d17194470b735fccdc8687433"
+                    data-sketchfab-title="Projeto Hidrossanitário 3D"
+                    aria-label="Explorar o projeto hidrossanitário em 3D">
+              <picture>
+                <source type="image/webp" srcset="assets/img/projeto-3d-900.webp 900w, assets/img/projeto-3d.webp 1139w" sizes="(max-width: 900px) 100vw, 620px">
+                <img src="assets/img/projeto-3d.jpg"
+                     srcset="assets/img/projeto-3d-900.jpg 900w, assets/img/projeto-3d.jpg 1139w"
+                     sizes="(max-width: 900px) 100vw, 620px"
+                     width="1139" height="689" loading="lazy" decoding="async"
+                     alt="Modelo 3D de projeto hidrossanitário com estrutura, reservatórios e redes de instalações">
+              </picture>
+              <span class="viewer__cta mono">
+                <span class="viewer__play" aria-hidden="true"></span>
+                Explorar em 3D
+              </span>
+            </button>
+            <span class="work__badge mono">Projeto 3D</span>
+            <span class="work__idx mono">05</span>
           </div>
           <div class="work__meta">
-            <h3>Em execução</h3>
-            <p class="mono">Conteúdo a ser fornecido</p>
+            <h3>Projeto hidrossanitário</h3>
+            <p class="mono">Modelo 3D interativo</p>
           </div>
+          <p class="work__credit mono">Modelo 3D: <a href="https://sketchfab.com/3d-models/projeto-hidrossanitario-3d-luiz-fernando-ioris-8aeb6a3d17194470b735fccdc8687433" target="_blank" rel="noopener noreferrer">JVS Engenharia</a> · Sketchfab</p>
         </article>
       </div>
+
+      <p class="works__foot mono">Registros publicados conforme a evolução das obras</p>
     </div>
   </section>
 
   <!-- ===================== REFERÊNCIAS ===================== -->
-  <section class="section references" id="referencias">
+  <!-- Seção temporariamente oculta até a publicação dos depoimentos reais.
+       Para reativar: remover apenas o atributo "hidden" da tag <section> abaixo.
+       HTML e estilos permanecem intactos. -->
+  <section class="section references" id="referencias" hidden>
     <div class="wrap">
       <header class="section__head" data-reveal>
         <p class="label mono">06 — Referências</p>
         <h2>Quem já construiu com a AGL</h2>
-        <p class="section__intro">
-          Depoimentos e referências de clientes serão publicados aqui, com autorização.
+                  <p class="section__intro">
+          Depoimentos e referências de clientes serão publicados aqui, com autorização de uso.
         </p>
       </header>
 
@@ -567,7 +716,7 @@
     <div class="wrap about__grid">
       <div class="about__left">
         <p class="label mono" data-reveal>07 — A AGL</p>
-        <h2 data-reveal>Engenharia com<br>responsabilidade<br>de quem assina.</h2>
+        <h2 data-reveal>Engenharia com<br>responsabilidade.</h2>
         <div class="about__stamp" data-reveal data-delay="2">
           <span class="mono">AGL ENGENHARIA</span>
           <span class="mono">CUIABÁ — MT</span>
@@ -576,14 +725,14 @@
       </div>
       <div class="about__right" data-reveal data-delay="1">
         <p class="about__lead">
-          A AGL Engenharia atua em Cuiabá e região com construção residencial e comercial,
-          projetos de engenharia e acompanhamento técnico de obras.
+          A AGL Engenharia atua em Cuiabá e no interior de Mato Grosso com construção
+          residencial e comercial, projetos de engenharia e acompanhamento técnico de obras.
         </p>
         <p>
           O trabalho começa entendendo o que precisa ser feito. Depois vem o planejamento,
           a execução com equipe em campo e o acompanhamento técnico — com registro e
-          comunicação ao longo do caminho. É um processo simples de explicar e exigente
-          de cumprir: é isso que a empresa se propõe a fazer em cada obra.
+          comunicação ao longo do caminho. É assim que a AGL trabalha: planejamento,
+          execução e acompanhamento em cada etapa da obra.
         </p>
         <p>
           A gestão pelo sistema <strong>Mais Controle</strong> e os relatórios periódicos

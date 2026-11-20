@@ -100,6 +100,33 @@
     });
   }
 
+  /* ---------- visualizador 3D: iframe carregado sob demanda ---------- */
+  document.querySelectorAll('[data-sketchfab]').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const id = trigger.getAttribute('data-sketchfab');
+      const title = trigger.getAttribute('data-sketchfab-title') || 'Modelo 3D';
+      const frame = trigger.closest('.work__frame');
+      if (!frame || !id || frame.classList.contains('is-loading')) return;
+
+      frame.classList.add('is-loading');
+
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://sketchfab.com/models/${id}/embed?autostart=1&ui_theme=dark&dnt=1`;
+      iframe.title = title;
+      iframe.allow = 'autoplay; fullscreen; xr-spatial-tracking';
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      iframe.addEventListener('load', () => {
+        frame.classList.remove('is-loading');
+        iframe.focus({ preventScroll: true });
+      });
+      iframe.addEventListener('error', () => frame.classList.remove('is-loading'));
+
+      trigger.remove();
+      frame.appendChild(iframe);
+    });
+  });
+
   /* ---------- ano do rodapé ---------- */
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
