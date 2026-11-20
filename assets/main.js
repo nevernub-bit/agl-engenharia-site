@@ -46,6 +46,7 @@
     }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
     revealEls.forEach((el) => io.observe(el));
   }
+  document.documentElement.classList.add('reveal-ready');
 
   /* ---------- linha de progresso do processo ---------- */
   const progress = document.getElementById('processProgress');
@@ -73,15 +74,21 @@
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = form.nome.value.trim();
-      const tipo = form.tipo.value;
-      const msg = form.mensagem.value.trim();
+      const nameField = form.elements.namedItem('nome');
+      const errorMessage = document.getElementById('nome-error');
+      const name = nameField.value.trim();
+      const tipo = form.elements.namedItem('tipo').value;
+      const msg = form.elements.namedItem('mensagem').value.trim();
 
       if (!name) {
-        form.nome.focus();
-        form.nome.style.borderColor = '#C8342B';
+        nameField.setAttribute('aria-invalid', 'true');
+        errorMessage.textContent = 'Informe seu nome para continuar.';
+        nameField.focus();
         return;
       }
+
+      nameField.setAttribute('aria-invalid', 'false');
+      errorMessage.textContent = '';
 
       const lines = [
         `Olá, vim pelo site da AGL Engenharia.`,
@@ -95,9 +102,15 @@
       window.open(url, '_blank', 'noopener');
     });
 
-    form.nome.addEventListener('input', () => {
-      form.nome.style.borderColor = '';
+    const nameField = form.elements.namedItem('nome');
+    const submitButton = form.querySelector('button[type="submit"]');
+    nameField.addEventListener('input', () => {
+      if (nameField.value.trim()) {
+        nameField.setAttribute('aria-invalid', 'false');
+        document.getElementById('nome-error').textContent = '';
+      }
     });
+    submitButton.disabled = false;
   }
 
   /* ---------- visualizador 3D: iframe carregado sob demanda ---------- */

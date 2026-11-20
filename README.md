@@ -1,78 +1,62 @@
 # AGL Engenharia — site institucional
 
-Site estático de página única (one-page) da AGL Engenharia, pronto para ser aberto,
-editado e publicado a partir de qualquer ambiente, inclusive o modo Code.
+Site institucional estático de página única.
 
-## Stack
+## Tecnologias
 
-- **HTML5 estático** — sem framework, sem CMS, sem gerador de site.
-- **CSS puro** (`assets/styles.css`) — variáveis CSS, grid, animações e `prefers-reduced-motion`.
-- **JavaScript vanilla** (`assets/main.js`) — IIFE, sem bibliotecas. Usa `IntersectionObserver`,
-  `requestAnimationFrame` e manipulação simples de DOM.
-- **Zero dependências de build.** Não há `node_modules`, bundler, transpilador ou etapa de compilação.
-- **Fontes via CDN** do Google Fonts: Manrope (textos/interface) e JetBrains Mono (rótulos técnicos).
-  Há fallback para fontes do sistema caso o CDN não carregue.
-- **SEO/estrutura** — título, meta description, Open Graph, `lang="pt-BR"`, headings semânticos,
-  JSON-LD `GeneralContractor` com os dados reais da empresa.
+- HTML5 sem framework ou CMS.
+- CSS puro em `assets/styles.css`, com Grid, variáveis, breakpoints e suporte a `prefers-reduced-motion`.
+- JavaScript vanilla em `assets/main.js`, sem dependências de build.
+- Fontes Manrope e JetBrains Mono pelo Google Fonts, com alternativas locais.
+- Schema.org em JSON-LD e metadados Open Graph/Twitter no HTML.
 
-## Estrutura de arquivos
+## Estrutura
 
-```
+```text
 .
-├── index.html          # página completa (todas as seções, inline SVG, JSON-LD)
-├── assets/
-│   ├── styles.css      # sistema visual completo
-│   └── main.js         # interações
+├── index.html
 ├── README.md
-└── .gitignore
+└── assets/
+    ├── main.js
+    ├── styles.css
+    └── img/
+        ├── logo-agl-header.png  # logo usada no cabeçalho
+        ├── logo-agl.png         # símbolo original, fonte dos favicons
+        ├── favicon*.png / .ico  # ícones transparentes em vários tamanhos
+        ├── obra-*.jpg / .webp   # fotografias da seção Obras e versões responsivas
+        ├── projeto-3d*.jpg / .webp
+        ├── skyfit-academia*.jpg / .webp
+        └── 01-... a 05-...      # imagens-fonte recebidas para o portfólio
 ```
 
-Não existem arquivos de imagem: toda a linguagem visual (malha técnica, planta estrutural,
-painel de obra, molduras de obras) é feita com CSS e SVG inline. Quando as fotos reais
-chegarem, crie `assets/img/` e substitua os blocos `<div class="work__frame">`.
+As imagens de Obras usam WebP com fallback JPEG e variantes menores para telas compactas. Os arquivos numerados são cópias-fonte recebidas para o portfólio; os arquivos `obra-*`, `skyfit-*` e `projeto-3d*` são as versões otimizadas utilizadas pela página.
 
-### Seções (âncoras)
+## Seções
 
-`#topo` hero · `#servicos` · `#gestao` (Mais Controle + acesso individual ao histórico) ·
-`#processo` · `#obras` (molduras reservadas) · `#referencias` (reservado) · `#agl` ·
-`#contato` · rodapé.
+Hero · posicionamento · serviços · gestão · relatórios (temporariamente ocultos) · processo · obras · referências (temporariamente ocultas) · A AGL · contato.
 
-## Como rodar localmente
+As seções de relatórios e referências permanecem no HTML com o atributo `hidden` até a decisão de reativá-las.
 
-O site não precisa de build. Basta servir a pasta por HTTP (abrir o arquivo direto também
-funciona, exceto o carregamento de fontes em alguns navegadores):
+## Formulário
+
+O formulário abre a conversa com os dados preenchidos no WhatsApp da AGL; não há backend nem envio por e-mail. Com JavaScript indisponível, o botão de envio permanece desativado e o visitante recebe um link direto para o WhatsApp, sem submeter os campos nem expor valores na URL.
+
+## Verificação local
+
+Sirva a pasta pela raiz do projeto com um servidor HTTP local, por exemplo:
 
 ```bash
-# opção 1 — Python (já instalado na maioria dos sistemas)
 python3 -m http.server 3000
-
-# opção 2 — Node
-npx --yes serve . -l 3000
 ```
 
-Depois abra `http://localhost:3000`.
+Depois acesse `http://localhost:3000`.
 
-## Migração para o modo Code
+## Configuração antes da publicação
 
-1. Descompacte o `.zip` (ou arraste a pasta `site`) para dentro do projeto no modo Code.
-2. Rode um dos comandos acima — não há `npm install`.
-3. Opcional: `git init && git add . && git commit -m "site AGL Engenharia"` e conecte o
-   GitHub pelo painel do projeto para versionar e publicar.
+- **Domínio:** canonical e `og:url` permanecem em `https://aglengenharia.com.br/` até a definição do domínio oficial. A referência do `og:image` também deve ser validada para o host final.
+- **Fontes:** Manrope e JetBrains Mono são carregadas do Google Fonts; há fontes de sistema como fallback.
+- **Favicon:** versões PNG transparentes em 16, 32, 48, 180 e 512 px, além de ICO multi-tamanho, derivadas do símbolo original `logo-agl.png`.
 
-## Pontos a confirmar antes de publicar
+## Dados publicados
 
-- **Domínio:** `index.html` usa `https://aglengenharia.com.br/` em `canonical` e `og:url`
-  como domínio provisório. Troque pelo domínio real.
-- **Imagens:** obras e depoimentos estão com molduras vazias, marcadas como conteúdo a fornecer.
-- **Painel de obra:** é uma representação ilustrativa em HTML/CSS. O comentário
-  `<!-- Componente preparado para receber screenshots reais do Mais Controle... -->`
-  indica o ponto de substituição por uma imagem real.
-- **Formulário:** monta a mensagem e abre o WhatsApp (`wa.me/5565992209399`). Não há backend
-  nem envio de e-mail.
-- **Tipografia:** a BabaPro é licenciada; quando os arquivos existirem, adicione `@font-face`
-  em `assets/styles.css` e ajuste `--f-sans`.
-
-## Dados oficiais usados no site
-
-AGL Engenharia · WhatsApp 65 99220-9399 · kleberluizsm@gmail.com ·
-Rua Treze, Quadra 11, nº 25 — Parque das Nações, Cuiabá/MT · CNPJ 51.758.687/0001-60.
+AGL Engenharia · WhatsApp 65 99220-9399 · kleberluizsm@gmail.com · Rua Treze, Quadra 11, nº 25 — Parque das Nações, Cuiabá/MT · CNPJ 51.758.687/0001-60.
